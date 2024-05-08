@@ -1,0 +1,15 @@
+name: Replace Text in HTML Files
+
+on:
+  push:  # This workflow will run on every push to the repository
+
+jobs:
+  replace-text:
+    runs-on: ubuntu-latest  # This workflow will run on an Ubuntu virtual machine
+    steps:
+      - uses: actions/checkout@v3  # This step checks out your code from the repository
+      - name: Install sed  # Install the 'sed' tool for text processing
+        run: sudo apt update && sudo apt install -y sed
+      - name: Replace Text  # This step performs the text replacement
+        run: |
+          find . -type f -name "*.html" -exec sed -i 's/math.iisc.ac.in/~dharmendrak/dharamsambey90.github.io/g' {} \;
