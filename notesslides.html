@@ -43,12 +43,6 @@
       margin-top: 20px;
     }
 
-    .img-responsive {
-      width: 300%;
-      height: 300%;
-      border: 5px solid black;
-    }
-
     .sidebar {
       background-color: #eee;
       padding: 15px;
@@ -60,16 +54,7 @@
       background-color: #eee;
       padding: 20px;
       border-radius: 5px;
-    }
-
-    .bordered-photo {
-      margin-bottom: 20px;
-      overflow: hidden;
-    }
-
-    .bordered-photo img {
-      width: 100%;
-      height: auto;
+      text-align: left; /* Align content to the left */
     }
 
     h2 {
@@ -80,16 +65,10 @@
       line-height: 1.6;
     }
 
-    .name-address {
-      text-align: center;
-      color: maroon;
-      font-size: 20px;
-      margin-top: 10px;
-    }
-
-    .work-description {
-      color: black;
-      font-size: 18px;
+    .warning-message {
+      font-style: italic;
+      margin-top: 20px;
+      color: #555;
     }
   </style>
 </head>
@@ -129,15 +108,18 @@
   <div class="container">
     <div class="row">
       <!-- Main Content -->
-<div class="main-content text-center">
-  <a href="https://drive.google.com/file/d/18OFYLaf7ULCXCSc1VX3kAMKUzwf--YrO/view" 
-     target="_blank" 
-     class="btn btn-primary btn-lg" 
-     style="font-family: 'Caveat', cursive; margin: 20px; padding: 15px 30px; border-radius: 8px; background-color: #428bca; border-color: #357ebd;">
-    📄 CLICK HERE FOR FUNCTIONAL ANALYSIS MM501 HANDOUT
-  </a>
-</div>
-
+      <div class="main-content">
+        <a href="https://drive.google.com/file/d/18OFYLaf7ULCXCSc1VX3kAMKUzwf--YrO/view" 
+           target="_blank" 
+           class="btn btn-primary btn-lg" 
+           style="font-family: 'Caveat', cursive; margin: 20px; padding: 15px 30px; border-radius: 8px; background-color: #428bca; border-color: #357ebd;">
+          📄 CLICK HERE FOR FUNCTIONAL ANALYSIS MM501 HANDOUT
+        </a>
+        <p class="warning-message">
+          Warning: I make no claims that these notes are completely error-free. Any errors, however, will be minor and easy to spot.
+        </p>
+      </div>
+    </div>
   </div>
 </body>
 </html>
