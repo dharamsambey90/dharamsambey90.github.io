@@ -1,0 +1,147 @@
+# COURSE DATA FILE
+# =================
+# This file is the single source of truth for all course information
+# used to build the individual course-*.html pages.
+#
+# FORMAT OVERVIEW
+# ----------------
+#
+# Each course is a block starting with `COURSE:` and separated by a line with `---`.
+#
+# Fields per course (all text is plain, no HTML needed):
+#   COURSE       A short ID that also appears in the HTML filename, e.g. "course-real-analysis".
+#   Title        Full course title as shown on the course page.
+#   ShortName    Short name used on the Teaching overview page.
+#   Level        Target audience, e.g. "Integrated MSc Students".
+#   Institution  e.g. "University of Hyderabad".
+#   Semesters    One or more semesters, separated by commas.
+#   Books        One book per line, each starting with "- ".
+#   Syllabus     Free-text block delimited by <<< and >>>.
+#   ProblemSets  One problem set per line, each starting with "- ", giving label and suggested PDF file name.
+#
+# Example ProblemSets line:
+#   - Practice Set 1 | course-real-analysis-ps1.pdf
+#
+# Suggested PDF naming pattern (you may adapt as needed):
+#   <COURSE>-[ps/notes/handout]<number>.pdf
+# Example: course-real-analysis-ps1.pdf, course-math-ii-notes1.pdf
+#
+# When you add a new course here, you should:
+#   1) Copy an existing course-*.html file.
+#   2) Rename it and update its contents using the values from this file.
+#   3) Make the course name on teaching.html link to that new HTML file.
+#
+# --------------------------------------
+# Current / Upcoming courses (examples)
+# --------------------------------------
+
+COURSE: course-real-analysis
+Title: Analysis (Math IV) — Real Analysis
+ShortName: Real Analysis
+Level: Integrated MSc Students
+Institution: University of Hyderabad
+Semesters: Fall 2026
+Books:
+- Introduction to Real Analysis, by Bartle and Sherbert.
+- Mathematical Analysis, by Tom M. Apostol.
+Syllabus:
+<<<
+abc
+<<<
+ProblemSets:
+- Practice Set 1 | course-real-analysis-ps1.pdf
+- Practice Set 2 | course-real-analysis-ps2.pdf
+- Practice Set 3 | course-real-analysis-ps3.pdf
+- Practice Set 4 | course-real-analysis-ps4.pdf
+- Practice Set 5 | course-real-analysis-ps5.pdf
+
+---
+
+COURSE: course-math-ii
+Title: Math II
+ShortName: Math II
+Level: Integrated MTech Students
+Institution: University of Hyderabad
+Semesters: Fall 2025, Fall 2026
+Books:
+- To be decided.
+Syllabus:
+<<<
+To be updated.
+<<<
+ProblemSets:
+- Practice Set 1 | course-math-ii-ps1.pdf
+
+---
+
+# -------------------------------
+# Past courses at University of Hyderabad
+# -------------------------------
+
+COURSE: course-functional-analysis
+Title: Functional Analysis
+ShortName: Functional Analysis
+Level: MSc Students
+Institution: University of Hyderabad
+Semesters: Spring 2024
+Books:
+- To be decided.
+Syllabus:
+<<<
+To be updated.
+<<<
+ProblemSets:
+- Practice Set 1 | course-functional-analysis-ps1.pdf
+
+---
+
+COURSE: course-real-analysis-ii
+Title: Real Analysis II (Advanced Multivariable Calculus)
+ShortName: Real Analysis II
+Level: MSc Students
+Institution: University of Hyderabad
+Semesters: Fall 2025
+Books:
+- To be decided.
+Syllabus:
+<<<
+To be updated.
+<<<
+ProblemSets:
+- Practice Set 1 | course-real-analysis-ii-ps1.pdf
+
+---
+
+COURSE: course-intro-probability
+Title: Introduction to Probability Theory
+ShortName: Introduction to Probability Theory
+Level: Integrated MSc Students
+Institution: University of Hyderabad
+Semesters: Spring 2024, Spring 2025
+Books:
+- To be decided.
+Syllabus:
+<<<
+To be updated.
+<<<
+ProblemSets:
+- Practice Set 1 | course-intro-probability-ps1.pdf
+
+---
+
+COURSE: course-math-i
+Title: Math I
+ShortName: Math I
+Level: Integrated MTech Students
+Institution: University of Hyderabad
+Semesters: Spring 2025
+Books:
+- To be decided.
+Syllabus:
+<<<
+To be updated.
+<<<
+ProblemSets:
+- Practice Set 1 | course-math-i-ps1.pdf
+
+---

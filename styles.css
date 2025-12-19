@@ -1,0 +1,462 @@
+/* Ribbon Navigation */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600;700&display=swap');
+
+.ribbon-nav {
+  position: relative;
+  background: #5a0000; /* Darker maroon background */
+  padding: 12px 0 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow: hidden;
+  font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+  font-weight: 600;
+  --gold: #FFC107; /* Golden yellow */
+}
+
+.ribbon-doodles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.12;
+  background-image: 
+    url("data:image/svg+xml,%3Csvg width='150' height='150' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30,30 L70,30 L70,70 L30,70 Z' fill='none' stroke='%23FFC107' stroke-width='0.8'/%3E%3Cpath d='M20,50 L80,50' stroke='%23FFC107' stroke-width='0.6'/%3E%3Cpath d='M50,20 L50,80' stroke='%23FFC107' stroke-width='0.6'/%3E%3Cpath d='M30,30 L70,70' stroke='%23FFC107' stroke-width='0.8'/%3E%3Cpath d='M70,30 L30,70' stroke='%23FFC107' stroke-width='0.8'/%3E%3Ccircle cx='50' cy='50' r='15' fill='none' stroke='%23FFC107' stroke-width='0.6'/%3E%3Ctext x='10' y='20' font-size='10' fill='%23FFC107' opacity='0.6'%3Eπ%3C/text%3E%3Ctext x='80' y='30' font-size='12' fill='%23FFC107' opacity='0.6'%3EΣ%3C/text%3E%3Ctext x='20' y='80' font-size='8' fill='%23FFC107' opacity='0.5'%3E∫%3C/text%3E%3Ctext x='85' y='85' font-size='14' fill='%23FFC107' opacity='0.4'%3E∞%3C/text%3E%3Ctext x='50' y='50' font-size='16' fill='%23FFC107' opacity='0.3'%3E+%3C/text%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10,10 L90,10 L90,90 L10,90 Z' fill='none' stroke='%23FFC107' stroke-width='0.5' opacity='0.3'/%3E%3Ccircle cx='20' cy='20' r='3' fill='%23FFC107' opacity='0.4'/%3E%3Ccircle cx='80' cy='20' r='3' fill='%23FFC107' opacity='0.4'/%3E%3Ccircle cx='50' cy='50' r='3' fill='%23FFC107' opacity='0.4'/%3E%3Cpath d='M30,70 L70,30' stroke='%23FFC107' stroke-width='0.8' opacity='0.3'/%3E%3Ctext x='15' y='45' font-size='10' fill='%23FFC107' opacity='0.4'%3Eα%3C/text%3E%3Ctext x='80' y='60' font-size='12' fill='%23FFC107' opacity='0.4'%3Eβ%3C/text%3E%3Ctext x='40' y='30' font-size='8' fill='%23FFC107' opacity='0.4'%3Eγ%3C/text%3E%3C/svg%3E");
+  background-size: 200px 200px, 300px 300px;
+  background-blend-mode: overlay;
+  pointer-events: none;
+}
+
+.ribbon-inner {
+  position: relative;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.ribbon-menu {
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  margin: 0;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.ribbon-menu li {
+  margin: 0 10px;
+  position: relative;
+}
+
+.ribbon-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 5px;
+  display: block;
+  position: relative;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ribbon-menu a:hover,
+.ribbon-menu a.active {
+  color: var(--gold);
+}
+
+.ribbon-menu a:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background: #FFD700;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.ribbon-menu a:hover:after,
+.ribbon-menu a.active:after {
+  width: 80%;
+}
+
+.ribbon-line {
+  position: relative;
+  height: 4px;
+  margin-top: 12px;
+}
+
+.ribbon-line .line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--gold);
+}
+
+/* Vignette effect */
+.ribbon-vignette {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.4) 100%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.ribbon-nav:hover .ribbon-vignette {
+  opacity: 0.3;
+}
+
+.ribbon-line .line-1 {
+  top: 0;
+  opacity: 0.8;
+}
+
+.ribbon-line .line-2 {
+  top: 3px;
+  opacity: 0.5;
+}
+
+/* Mobile menu toggle */
+.ribbon-mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  z-index: 1001;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .ribbon-menu {
+    display: none;
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  
+  .ribbon-nav.menu-open .ribbon-menu {
+    display: flex;
+  }
+  
+  .ribbon-menu li {
+    margin: 5px 0;
+    text-align: center;
+  }
+  
+  .ribbon-mobile-toggle {
+    display: block;
+  }
+  
+  .ribbon-menu a {
+    padding: 8px 0;
+    font-size: 16px;
+  }
+}
+
+/* Body styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  /* warm paper-like background inspired by inspo.html */
+  background: radial-gradient(circle at top left, #fffef9 0, #fffdf5 42%, #fffaf0 100%);
+  color: #222;
+  line-height: 1.7;
+  padding-top: 0; /* Remove any default padding that might interfere with fixed header */
+}
+
+/* Layout */
+.container {
+  margin-top: 32px;
+}
+
+.main-content {
+  background: #fffef9;
+  padding: 24px 28px;
+  border-radius: 10px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(139, 0, 0, 0.08);
+  transition: box-shadow 0.18s ease, transform 0.15s ease;
+}
+
+.main-content:hover {
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
+}
+
+.sidebar {
+  background: #fffef9;
+  padding: 18px 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(139, 0, 0, 0.06);
+}
+
+/* Photo/card */
+.bordered-photo {
+  margin-bottom: 24px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.10);
+  border: 1px solid rgba(139, 0, 0, 0.08);
+}
+
+.bordered-photo img,
+.img-responsive {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+}
+
+/* Teaching page enhancements */
+.teaching-section-heading {
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+.course-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-left: 6px;
+}
+
+.course-badge-current {
+  background: linear-gradient(135deg, #8b0000, darkgoldenrod);
+  color: #fffdf8;
+}
+
+.course-badge-past {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fbbf24;
+}
+
+.course-badge-ta {
+  background: #e0f2fe;
+  color: #1d4ed8;
+  border: 1px solid #93c5fd;
+}
+
+.collapse-toggle {
+  display: inline-block;
+  margin: 0;
+  cursor: pointer;
+  color: #8b0000;
+  text-decoration: none;
+}
+
+.collapse-toggle:hover,
+.collapse-toggle:focus {
+  color: darkgoldenrod;
+  text-decoration: none;
+}
+
+/* Card-like wrappers for dropdown sections on teaching page */
+.collapse-card {
+  background: #fffef9;
+  border-radius: 10px;
+  border: 1px solid rgba(139, 0, 0, 0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  margin-top: 14px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.collapse-card:hover {
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.collapse-card-header {
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #fdf7ec, #fffef9);
+  border-bottom: 1px solid rgba(139, 0, 0, 0.06);
+}
+
+.collapse-card-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.collapse-icon {
+  font-size: 11px;
+  margin-left: 8px;
+  transition: transform 0.18s ease;
+}
+
+/* Bootstrap adds .collapsed on the toggle when the target is closed */
+.collapse-toggle.collapsed .collapse-icon {
+  transform: rotate(0deg);
+}
+
+.collapse-toggle .collapse-icon {
+  transform: rotate(180deg);
+}
+
+.collapse-card-body {
+  padding: 8px 16px 12px 16px;
+}
+
+.name-address {
+  text-align: center;
+  color: #8b0000;
+  font-size: 18px;
+  margin-top: 12px;
+}
+
+/* Typography */
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  color: #1b1b1f;
+  font-weight: 600;
+}
+
+h2.work-description {
+  color: #8b0000;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.work-description,
+.publications-list,
+.main-content,
+.container,
+.sidebar {
+  font-size: 17px;
+}
+
+.publications-list ul,
+.main-content ul,
+.container ul {
+  padding-left: 22px;
+}
+
+.publications-list li,
+.main-content li {
+  margin-bottom: 6px;
+}
+
+.publications-list a {
+  color: #8b0000;
+}
+
+.publications-list a:hover,
+.publications-list a:focus {
+  color: darkgoldenrod;
+  text-decoration: underline;
+}
+
+.warning-message {
+  font-style: italic;
+  margin-top: 16px;
+  color: #555;
+}
+
+/* Navbar + ribbon */
+nav.navbar {
+  background: linear-gradient(90deg, #4b0000, #8b0000);
+  border: none;
+  height: 70px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+}
+
+.navbar-nav > li > a {
+  color: #fffdf8 !important;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 22px 20px;
+  transition: background-color 0.18s ease, color 0.18s ease, box-shadow 0.18s ease, transform 0.12s ease;
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
+  background-color: rgba(255, 255, 255, 0.06);
+  color: #fffaf0 !important;
+  box-shadow: inset 0 -3px 0 #ffd966;
+}
+
+.navbar-nav > .active > a,
+.navbar-nav > .active > a:focus,
+.navbar-nav > .active > a:hover {
+  background-color: rgba(255, 255, 255, 0.10) !important;
+  color: #ffffff !important;
+  box-shadow: inset 0 -3px 0 #ffd966;
+}
+
+.ribbon {
+  background: linear-gradient(90deg, goldenrod, darkgoldenrod);
+  height: 6px;
+  width: 100%;
+}
+
+/* Buttons / links */
+.btn-primary {
+  background: linear-gradient(135deg, #8b0000, darkgoldenrod);
+  border-color: #8b0000;
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: linear-gradient(135deg, #a00000, #e0b13b);
+  border-color: #5f0000;
+  box-shadow: 0 10px 24px rgba(139, 0, 0, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Notes button that uses Caveat */
+.notes-cta {
+  font-family: 'Caveat', cursive;
+  margin: 20px 0;
+  padding: 15px 30px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #8b0000, darkgoldenrod);
+  border-color: #8b0000;
+  font-size: 22px;
+}
+
+/* Small utility for centered page titles */
+.page-title {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Subtle global link styling */
+a {
+  color: #8b0000;
+}
+
+a:hover,
+a:focus {
+  color: darkgoldenrod;
+}
