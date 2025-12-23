@@ -3,14 +3,14 @@
 
 .ribbon-nav {
   position: relative;
-  background: #5a0000; /* Darker maroon background */
+  background: #000000; /* Changed to black */
   padding: 12px 0 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   overflow: hidden;
   font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
   font-weight: 600;
-  --gold: #FFC107; /* Golden yellow */
+  --gold: #0095F6; /* Instagram blue */
 }
 
 .ribbon-doodles {
@@ -75,7 +75,7 @@
   height: 2px;
   bottom: 0;
   left: 50%;
-  background: #FFD700;
+  background: #0095F6;
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
@@ -421,16 +421,16 @@ nav.navbar {
 
 /* Buttons / links */
 .btn-primary {
-  background: linear-gradient(135deg, #8b0000, darkgoldenrod);
-  border-color: #8b0000;
+  background: linear-gradient(135deg, #000000, #0095F6);
+  border-color: #000000;
   transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-  background: linear-gradient(135deg, #a00000, #e0b13b);
-  border-color: #5f0000;
-  box-shadow: 0 10px 24px rgba(139, 0, 0, 0.4);
+  background: linear-gradient(135deg, #000000, #0077C2);
+  border-color: #000000;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
   transform: translateY(-1px);
 }
 
