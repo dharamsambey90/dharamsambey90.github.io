@@ -10,7 +10,7 @@
   overflow: hidden;
   font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
   font-weight: 600;
-  --gold: #0095F6; /* Instagram blue */
+  --gold: #87CEEB; /* Sky blue */
 }
 
 .ribbon-doodles {
@@ -75,7 +75,7 @@
   height: 2px;
   bottom: 0;
   left: 50%;
-  background: #0095F6;
+  background: #87CEEB;
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
@@ -189,7 +189,7 @@ body {
   padding: 24px 28px;
   border-radius: 10px;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(139, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   transition: box-shadow 0.18s ease, transform 0.15s ease;
 }
 
@@ -202,7 +202,7 @@ body {
   background: #fffef9;
   padding: 18px 20px;
   border-radius: 8px;
-  border: 1px solid rgba(139, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 /* Photo/card */
@@ -211,7 +211,7 @@ body {
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.10);
-  border: 1px solid rgba(139, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .bordered-photo img,
@@ -258,13 +258,13 @@ body {
   display: inline-block;
   margin: 0;
   cursor: pointer;
-  color: #8b0000;
+  color: #000000;
   text-decoration: none;
 }
 
 .collapse-toggle:hover,
 .collapse-toggle:focus {
-  color: darkgoldenrod;
+  color: #87CEEB;
   text-decoration: none;
 }
 
@@ -272,7 +272,7 @@ body {
 .collapse-card {
   background: #fffef9;
   border-radius: 10px;
-  border: 1px solid rgba(139, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
   margin-top: 14px;
   margin-bottom: 10px;
@@ -321,7 +321,7 @@ body {
 
 .name-address {
   text-align: center;
-  color: #8b0000;
+  color: #000000;
   font-size: 18px;
   margin-top: 12px;
 }
@@ -338,7 +338,7 @@ h3,
 }
 
 h2.work-description {
-  color: #8b0000;
+  color: #000000;
   margin-top: 0;
   margin-bottom: 16px;
 }
@@ -367,12 +367,12 @@ p {
 }
 
 .publications-list a {
-  color: #8b0000;
+  color: #000000;
 }
 
 .publications-list a:hover,
 .publications-list a:focus {
-  color: darkgoldenrod;
+  color: #87CEEB;
   text-decoration: underline;
 }
 
@@ -384,7 +384,7 @@ p {
 
 /* Navbar + ribbon */
 nav.navbar {
-  background: linear-gradient(90deg, #4b0000, #8b0000);
+  background: linear-gradient(90deg, #000000, #000000);
   border: none;
   height: 70px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
@@ -402,7 +402,7 @@ nav.navbar {
 .navbar-nav > li > a:focus {
   background-color: rgba(255, 255, 255, 0.06);
   color: #fffaf0 !important;
-  box-shadow: inset 0 -3px 0 #ffd966;
+  box-shadow: inset 0 -3px 0 #87CEEB;
 }
 
 .navbar-nav > .active > a,
@@ -410,25 +410,25 @@ nav.navbar {
 .navbar-nav > .active > a:hover {
   background-color: rgba(255, 255, 255, 0.10) !important;
   color: #ffffff !important;
-  box-shadow: inset 0 -3px 0 #ffd966;
+  box-shadow: inset 0 -3px 0 #87CEEB;
 }
 
 .ribbon {
-  background: linear-gradient(90deg, goldenrod, darkgoldenrod);
+  background: linear-gradient(90deg, #87CEEB, #6BB6D6);
   height: 6px;
   width: 100%;
 }
 
 /* Buttons / links */
 .btn-primary {
-  background: linear-gradient(135deg, #000000, #0095F6);
+  background: linear-gradient(135deg, #000000, #87CEEB);
   border-color: #000000;
   transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-  background: linear-gradient(135deg, #000000, #0077C2);
+  background: linear-gradient(135deg, #000000, #6BB6D6);
   border-color: #000000;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
   transform: translateY(-1px);
@@ -440,8 +440,8 @@ nav.navbar {
   margin: 20px 0;
   padding: 15px 30px;
   border-radius: 8px;
-  background: linear-gradient(135deg, #8b0000, darkgoldenrod);
-  border-color: #8b0000;
+  background: linear-gradient(135deg, #000000, #87CEEB);
+  border-color: #000000;
   font-size: 22px;
 }
 
@@ -453,10 +453,10 @@ nav.navbar {
 
 /* Subtle global link styling */
 a {
-  color: #8b0000;
+  color: #000000;
 }
 
 a:hover,
 a:focus {
-  color: darkgoldenrod;
+  color: #87CEEB;
 }
