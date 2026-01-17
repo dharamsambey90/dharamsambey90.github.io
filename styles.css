@@ -453,10 +453,10 @@ nav.navbar {
 
 /* Subtle global link styling */
 a {
-  color: initial;
+  color: blue;
 }
 
 a:hover,
 a:focus {
-  color: initial;
+  color: blue;
 }
