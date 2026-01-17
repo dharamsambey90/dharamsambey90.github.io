@@ -453,7 +453,7 @@ nav.navbar {
 
 /* Subtle global link styling */
 a {
-  color: #000000;
+  color: initial;
 }
 
 a:hover,
