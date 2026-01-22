@@ -460,3 +460,202 @@ a:hover,
 a:focus {
   color: #87CEEB;
 }
+
+/* Update Bot Styles */
+.update-bot {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  width: 350px;
+  max-height: 70vh;
+  height: 500px;
+  background: white;
+  border: 2px solid #87CEEB;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  z-index: 10000;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bot-header {
+  background: linear-gradient(135deg, #000000, #87CEEB);
+  color: white;
+  padding: 15px;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+
+.bot-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bot-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.bot-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background: #fffef9;
+}
+
+.bot-message {
+  background: #87CEEB;
+  color: white;
+  padding: 10px 12px;
+  border-radius: 15px 15px 15px 0;
+  margin-bottom: 10px;
+  max-width: 85%;
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+.user-message {
+  background: #f0f0f0;
+  color: #333;
+  padding: 10px 12px;
+  border-radius: 15px 15px 0 15px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  max-width: 85%;
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+.bot-input-area {
+  padding: 15px;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  gap: 10px;
+}
+
+.bot-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+  font-size: 14px;
+}
+
+.bot-input:focus {
+  border-color: #87CEEB;
+}
+
+.bot-send {
+  background: #87CEEB;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.bot-send:hover {
+  background: #6BB6D6;
+}
+
+/* Password Modal */
+.password-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001;
+}
+
+.password-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.password-content h3 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.password-content input {
+  width: 200px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.password-content button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#submit-password {
+  background: #87CEEB;
+  color: white;
+}
+
+#cancel-password {
+  background: #ddd;
+  color: #333;
+}
+
+/* Click feedback animation */
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-10px); }
+  20% { opacity: 1; transform: translateY(0); }
+  80% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .update-bot {
+    width: 90%;
+    right: 5%;
+    left: 5%;
+    height: 60vh;
+    max-height: 400px;
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .update-bot {
+    width: 95%;
+    right: 2.5%;
+    left: 2.5%;
+    height: 70vh;
+    max-height: 350px;
+    bottom: 10px;
+  }
+}
