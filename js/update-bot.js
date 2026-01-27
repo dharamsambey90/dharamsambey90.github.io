@@ -152,8 +152,8 @@ class UpdateBot {
             return `To update your CV:\n\n1. Replace \`cv.pdf\` with the new version\n2. Ensure filename stays \`cv.pdf\`\n3. Test the link on the main page\n4. Commit the new PDF to GitHub\n\nMake sure the PDF is optimized for web viewing!`;
         }
 
-        if (lowerMessage.includes('github') || lowerMessage.includes('commit') || lowerMessage.includes('push')) {
-            return `To commit changes to GitHub:\n\n1. Open terminal in project directory\n2. Run: \`git add .\`\n3. Run: \`git commit -m "Your descriptive message"\`\n4. Run: \`git push origin main\`\n\nYour changes will be live in a few minutes!`;
+        if (lowerMessage.includes('github') || lowerMessage.includes('commit') || lowerMessage.includes('push') || lowerMessage.includes('deploy') || lowerMessage.includes('live')) {
+            return `🚀 **EASY WAY - Use the deployment script!**\n\n**Method 1: Super Simple (Recommended)**\n1. Open terminal in your website folder\n2. Run: \`./update-site.sh\`\n3. Done! Your site will be live in 1-2 minutes\n\n**Method 2: Manual (if script doesn't work)**\n1. Open terminal in project directory\n2. Run: \`git add .\`\n3. Run: \`git commit -m "Your description"\`\n4. Run: \`git push origin main\`\n\n**Method 3: Advanced script**\nRun: \`./deploydharam.sh\`\n\n⏱️ Your changes appear at: https://dharamsambey90.github.io/\n\nThe first method is the easiest - just run \`./update-site.sh\`!`;
         }
 
         return `I can help you update:\n\n• 📄 Publications\n• 📚 Courses & Teaching\n• 🔬 Research content\n• 🎤 Conferences\n• 📋 CV\n• 🚀 GitHub deployment\n\nPlease specify what you'd like to update, or ask "how to add [content]" for specific guidance.`;
